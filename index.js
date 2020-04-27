@@ -7,13 +7,14 @@ require('./database');
 
 // Routes
 const authRoute = require('./routes/auth');
+const notesRoute = require('./routes/notes');
 
 // Middlewares
 app.use(express.json());
 
 // Route middlewares
-app.use('/api/user/', authRoute);
-
+app.use('/api/user', authRoute);
+app.use('/api/notes', notesRoute);
 
 
 
